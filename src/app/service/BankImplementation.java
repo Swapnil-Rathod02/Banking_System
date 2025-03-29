@@ -35,7 +35,7 @@ public class BankImplementation  implements BankOperation {
 
     //widraw
     @Override
-    public String widraw(int accNo,double amount)throws CustomException{
+    public String withdraw(int accNo,double amount)throws CustomException{
         Customer customer=customers.get(customers.indexOf(new Customer(accNo)));
         double balance=sufficientBalance(customer,amount);
         customer.setBalance(balance-amount);
